@@ -4,38 +4,38 @@ import { BookOpen, Users, Trophy, Clock, Shield, Headphones } from 'lucide-react
 const features = [
   {
     icon: BookOpen,
-    title: "Expert-Led Courses",
-    description: "Learn from industry professionals with years of real-world experience",
+    title: "CBC Curriculum",
+    description: "Comprehensive CBC secondary education program aligned with national standards",
     color: "bg-blue-100 text-blue-600"
   },
   {
     icon: Users,
-    title: "Interactive Community",
-    description: "Connect with fellow students and mentors in our vibrant learning community",
+    title: "Experienced Teachers",
+    description: "Qualified and experienced teachers dedicated to student success and development",
     color: "bg-purple-100 text-purple-600"
   },
   {
     icon: Trophy,
-    title: "Certified Completion",
-    description: "Earn industry-recognized certificates upon successful course completion",
+    title: "Academic Excellence",
+    description: "Consistent high performance in KCSE with 95% of students achieving C+ and above",
     color: "bg-orange-100 text-orange-600"
   },
   {
     icon: Clock,
-    title: "Learn at Your Pace",
-    description: "Access courses 24/7 and learn according to your schedule and preferences",
+    title: "Flexible Learning",
+    description: "Day and boarding options available to accommodate different student needs",
     color: "bg-green-100 text-green-600"
   },
   {
     icon: Shield,
-    title: "Quality Guaranteed",
-    description: "30-day money-back guarantee if you're not satisfied with your learning experience",
+    title: "Safe Environment",
+    description: "Secure, nurturing environment with strict safety protocols and pastoral care",
     color: "bg-red-100 text-red-600"
   },
   {
     icon: Headphones,
-    title: "24/7 Support",
-    description: "Get help whenever you need it with our dedicated student support team",
+    title: "Student Support",
+    description: "Dedicated guidance and counseling services for academic and personal development",
     color: "bg-indigo-100 text-indigo-600"
   }
 ];
@@ -47,10 +47,10 @@ const Features = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why Choose Booker Academy?
+            Why Choose Booker Academy High School?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We're committed to providing the best online learning experience with features designed for your success
+            We provide quality CBC secondary education with a focus on academic excellence, character development, and preparing students for future success
           </p>
         </div>
 

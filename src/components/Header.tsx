@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Menu, X, BookOpen, User, Search } from 'lucide-react';
+import { Menu, X, GraduationCap, User, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -14,7 +14,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
-              <BookOpen className="h-6 w-6 text-white" />
+              <GraduationCap className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-bold text-gray-900">Booker Academy</span>
           </div>
@@ -22,8 +22,9 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Courses</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">About</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">About Us</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Academics</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Admissions</a>
             <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
           </nav>
 
@@ -32,16 +33,16 @@ const Header = () => {
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
               <Input 
-                placeholder="Search courses..." 
+                placeholder="Search..." 
                 className="pl-10 w-64 bg-gray-50 border-gray-200 focus:bg-white"
               />
             </div>
             <Button variant="ghost" size="sm">
               <User className="h-4 w-4 mr-2" />
-              Login
+              Portal
             </Button>
             <Button size="sm" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-              Sign Up
+              Apply Now
             </Button>
           </div>
 
@@ -59,16 +60,17 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col space-y-4">
               <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Courses</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">About</a>
+              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">About Us</a>
+              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Academics</a>
+              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Admissions</a>
               <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
               <div className="pt-4 border-t border-gray-100 flex flex-col space-y-2">
                 <Button variant="ghost" size="sm" className="justify-start">
                   <User className="h-4 w-4 mr-2" />
-                  Login
+                  Student Portal
                 </Button>
                 <Button size="sm" className="bg-gradient-to-r from-blue-600 to-purple-600">
-                  Sign Up
+                  Apply Now
                 </Button>
               </div>
             </div>
