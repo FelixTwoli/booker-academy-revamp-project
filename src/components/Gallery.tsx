@@ -6,33 +6,45 @@ import { useEffect, useState } from 'react';
 const schoolImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop&crop=center",
-    title: "Modern Classrooms",
-    description: "Well-equipped classrooms with modern learning facilities"
+    src: "/lovable-uploads/bf58149f-57e9-4033-a80a-e48a7d09b3a4.png",
+    title: "Student Life",
+    description: "Our vibrant students enjoying their school experience"
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=400&fit=crop&crop=center",
-    title: "School Campus",
-    description: "Our beautiful and spacious school compound"
+    src: "/lovable-uploads/403a7297-2615-47ca-b114-851383a786fb.png",
+    title: "Chess Tournament",
+    description: "Students participating in competitive chess matches"
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=600&h=400&fit=crop&crop=center",
-    title: "Academic Excellence",
-    description: "Students engaged in quality learning activities"
+    src: "/lovable-uploads/4abd66b8-a0f5-4623-9956-18e70d31b096.png",
+    title: "Innovation Summit",
+    description: "Booker Academy students at Technovation World Summit"
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1527576539890-dfa815648363?w=600&h=400&fit=crop&crop=center",
-    title: "School Building",
-    description: "Our modern and secure school infrastructure"
+    src: "/lovable-uploads/c18ba440-146f-451e-9b75-a5f5f5ca6c79.png",
+    title: "Graduation Day",
+    description: "Celebrating our graduates' academic achievements"
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=600&h=400&fit=crop&crop=center",
-    title: "Learning Environment",
-    description: "Conducive environment for academic growth"
+    src: "/lovable-uploads/cae3d06c-3f28-4f71-a26b-4f000c0d952d.png",
+    title: "Cultural Events",
+    description: "Students celebrating diverse cultures and traditions"
+  },
+  {
+    id: 6,
+    src: "/lovable-uploads/099b85fd-e880-49e9-92ee-3741c5973445.png",
+    title: "Educational Trips",
+    description: "Students on educational excursions and field trips"
+  },
+  {
+    id: 7,
+    src: "/lovable-uploads/9e658b6b-218d-4018-8a3d-d26cf897c288.png",
+    title: "School Community",
+    description: "Our dedicated teaching staff and school community"
   }
 ];
 
@@ -50,18 +62,18 @@ const Gallery = () => {
   }, [api]);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-red-50 via-white to-red-50">
+    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge className="bg-red-100 text-red-800 hover:bg-red-100 mb-4">
+          <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 mb-4">
             📸 School Gallery
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Experience Booker Academy
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Take a glimpse into our modern facilities, vibrant campus life, and dedicated learning environment
+            Take a glimpse into our vibrant school life, academic excellence, and the memorable moments that define our community
           </p>
         </div>
 
@@ -96,27 +108,27 @@ const Gallery = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 bg-white shadow-lg border-red-200 hover:bg-red-50" />
-            <CarouselNext className="hidden md:flex -right-12 bg-white shadow-lg border-red-200 hover:bg-red-50" />
+            <CarouselPrevious className="hidden md:flex -left-12 bg-white shadow-lg border-blue-200 hover:bg-blue-50" />
+            <CarouselNext className="hidden md:flex -right-12 bg-white shadow-lg border-blue-200 hover:bg-blue-50" />
           </Carousel>
         </div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-16 border-t border-gray-200">
           <div className="text-center">
-            <div className="text-3xl font-bold text-red-600 mb-2">500+</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
             <div className="text-gray-600">Students Enrolled</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-red-600 mb-2">25+</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">25+</div>
             <div className="text-gray-600">Qualified Teachers</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-red-600 mb-2">10+</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
             <div className="text-gray-600">Years of Excellence</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-red-600 mb-2">95%</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
             <div className="text-gray-600">KCSE Success Rate</div>
           </div>
         </div>
