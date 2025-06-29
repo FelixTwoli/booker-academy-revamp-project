@@ -85,7 +85,7 @@ const Gallery = () => {
             <img
               src={images[currentIndex].src}
               alt={images[currentIndex].alt}
-              className="w-full h-full object-cover transition-all duration-500"
+              className="w-full h-full object-contain bg-gray-100 transition-all duration-500"
             />
             
             {/* Overlay with title */}
@@ -128,7 +128,7 @@ const Gallery = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain bg-gray-50"
                 />
               </button>
             ))}
