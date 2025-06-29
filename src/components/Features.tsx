@@ -42,6 +42,13 @@ const features = [
 ];
 
 const Features = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,7 +91,7 @@ const Features = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-16" id="admissions">
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Join Our Community?
@@ -93,10 +100,16 @@ const Features = () => {
               Applications for Grade 10 admission are now open. Secure your child's future with quality CBC education.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-colors">
+              <button 
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-colors"
+                onClick={() => scrollToSection('admissions')}
+              >
                 Apply Now
               </button>
-              <button className="border border-blue-200 text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <button 
+                className="border border-blue-200 text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+                onClick={() => scrollToSection('contact')}
+              >
                 Schedule Visit
               </button>
             </div>

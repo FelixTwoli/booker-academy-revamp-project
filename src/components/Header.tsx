@@ -1,11 +1,18 @@
 
 import { useState } from 'react';
-import { Menu, X, GraduationCap, User, Search } from 'lucide-react';
+import { Menu, X, GraduationCap, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
@@ -21,27 +28,49 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">About Us</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Academics</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Admissions</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
+            <button 
+              onClick={() => scrollToSection('home')} 
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            >
+              Home
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')} 
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            >
+              About Us
+            </button>
+            <button 
+              onClick={() => scrollToSection('academics')} 
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            >
+              Academics
+            </button>
+            <button 
+              onClick={() => scrollToSection('admissions')} 
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            >
+              Admissions
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')} 
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            >
+              Contact
+            </button>
           </nav>
 
-          {/* Search and Auth */}
+          {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-              <Input 
-                placeholder="Search..." 
-                className="pl-10 w-64 bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-300"
-              />
-            </div>
             <Button variant="ghost" size="sm" className="hover:text-blue-600">
               <User className="h-4 w-4 mr-2" />
               Portal
             </Button>
-            <Button size="sm" className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800">
+            <Button 
+              size="sm" 
+              className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800"
+              onClick={() => scrollToSection('admissions')}
+            >
               Apply Now
             </Button>
           </div>
@@ -59,17 +88,46 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col space-y-4">
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">About Us</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Academics</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Admissions</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+              <button 
+                onClick={() => scrollToSection('home')} 
+                className="text-gray-700 hover:text-blue-600 font-medium text-left"
+              >
+                Home
+              </button>
+              <button 
+                onClick={() => scrollToSection('about')} 
+                className="text-gray-700 hover:text-blue-600 font-medium text-left"
+              >
+                About Us
+              </button>
+              <button 
+                onClick={() => scrollToSection('academics')} 
+                className="text-gray-700 hover:text-blue-600 font-medium text-left"
+              >
+                Academics
+              </button>
+              <button 
+                onClick={() => scrollToSection('admissions')} 
+                className="text-gray-700 hover:text-blue-600 font-medium text-left"
+              >
+                Admissions
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')} 
+                className="text-gray-700 hover:text-blue-600 font-medium text-left"
+              >
+                Contact
+              </button>
               <div className="pt-4 border-t border-gray-100 flex flex-col space-y-2">
                 <Button variant="ghost" size="sm" className="justify-start hover:text-blue-600">
                   <User className="h-4 w-4 mr-2" />
                   Student Portal
                 </Button>
-                <Button size="sm" className="bg-gradient-to-r from-blue-600 to-indigo-700">
+                <Button 
+                  size="sm" 
+                  className="bg-gradient-to-r from-blue-600 to-indigo-700"
+                  onClick={() => scrollToSection('admissions')}
+                >
                   Apply Now
                 </Button>
               </div>

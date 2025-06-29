@@ -4,8 +4,15 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, BookOpen, Users, Trophy } from 'lucide-react';
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-white overflow-hidden">
+    <section id="home" className="relative min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       
@@ -29,11 +36,20 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-3">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-3"
+                onClick={() => scrollToSection('admissions')}
+              >
                 Apply for Grade 10
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="border-blue-200 text-blue-700 hover:bg-blue-50 px-8 py-3">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-blue-200 text-blue-700 hover:bg-blue-50 px-8 py-3"
+                onClick={() => scrollToSection('gallery')}
+              >
                 Take Virtual Tour
               </Button>
             </div>
